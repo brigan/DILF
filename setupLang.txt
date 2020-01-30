@@ -1,0 +1,21 @@
+./Data/
+data.dat
+2
+15
+5
+5
+
+
+
+################################3
+## 
+## fDataPath
+## fDataFile
+## nVars
+## nPoints
+## k (for k-fold cross validation) 
+## maxDeg (maximum degree of polynomials to which to fit the data) 
+
+
+
+

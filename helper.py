@@ -55,7 +55,7 @@ def crossValPolyFitSingleSeries(t, thisX, nPoints, k, maxDeg):
 	""" 
 
 	# Generate indexes for cross validation: 
-	nIOut = nPoints/k; 
+	nIOut = int(nPoints/k); 
 	iPerm = list(np.random.permutation(nPoints)); 
 
 	# Loop over degrees: 
@@ -115,7 +115,7 @@ def crossValPolyFit(t, x, nVars, nPoints, k, maxDeg, wPath):
 		fGo = True; 
 		while (fGo): 
 			fGo = False; 
-			(pDeg, p) = crossValPolyFitSingleSeries(t, thisX, nPoints, nVars, thisMaxDeg); 
+			(pDeg, p) = crossValPolyFitSingleSeries(t, thisX, nPoints, k, thisMaxDeg); 
 			if (pDeg == thisMaxDeg): 
 				thisMaxDeg += 1; 
 				fGo = True; 
